@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffefea;
+    font-family: 'Lato', sans-serif;
+    color: #fff;
+    padding: 5px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    text-align: center;
+    color: #000;
+}
+
+button {
+    cursor: pointer;
+    color: #fff;
+}
+
+.btn.btn-toggle {
+    width: max-content;
+    background-color: darksalmon;
+}
+
+.text-box {
+    position: absolute;
+    top: 35%;
+    left: 20%;
+    background-color: #333;
+    width: 70%;
+    height: min-content;
+    padding: 20px;
+    border-radius: 5px;
+    z-index: 1;
+    transform: translateY(-200%);
+    transition: ease-in-out 1s;
+}
+
+.show {
+    transform: translateY(0%);
+    transition: ease-in-out 1s;
+}
+
+.close {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    cursor: pointer;
+}
+
+select {
+    background-color: darksalmon;
+    width: 100%;
+    color: #fff;
+    font-size: 1em;
+}
+
+textarea {
+    width: 100%;
+    height: 10em;
+    margin-top: 10px;
+    font-size: 1em;
+}
+
+.btn {
+    width: 100%;
+    padding: 5px;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-size: 1em;  
+    background-color: darksalmon;  
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 10px;
+    margin-top: 40px;
+}
+
+.card {
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: green;
+    border-radius: 10px;
+    height: 200px;
+    width: 100%;
+    transition: ease-in-out .5s;
+}
+
+.card.active {
+    box-shadow: 5px 5px 5px 5px darksalmon;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}
+
+.info {
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 0px;
+    height: 30px;
+    width: 100%;
+    background-color: darksalmon;
+    border-radius: 0 0 10px 10px;
+    padding: 5px;
+}
+
+@media (max-width: 500px ) {
+   main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+ }
+}
+
+@media (min-width: 501px) and (max-width:760px) {
+    main {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+     }
+}
